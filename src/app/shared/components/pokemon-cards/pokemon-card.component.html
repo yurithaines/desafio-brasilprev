@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+    <img mat-card-image [src]="card.imageUrl" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p><strong>Nome:</strong> {{card.name}}</p>
+      <p><strong>ID:</strong> {{card.id}}</p>
+    
+    </mat-card-content>
+    <mat-card-actions class="wrapper-card-actions">
+      <div class="wrapper-img-type" >
+        <img class="img-type" *ngFor="let type of card.types" [matTooltip]="type" [src]="getUrlTypeImage(type)">
+      </div>
+      <button mat-raised-button class="btn-details" (click)="clickDetails()">+ Detalhes</button>
+    </mat-card-actions>
+  </mat-card>

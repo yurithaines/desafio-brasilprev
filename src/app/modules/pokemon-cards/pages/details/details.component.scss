@@ -1,0 +1,121 @@
+.wrapper-details{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    .wrapper-right{
+        display: flex;
+        flex-direction: column;
+        .btn-back{
+            margin-left: 24px;
+            margin-bottom: 24px;
+        }
+    }
+    mat-card{
+        margin-left: 24px;
+        background: #8080803b;
+    }
+    .wrapper-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #80808038;
+        .card-id{
+            margin-left: 6px;
+        }
+    }
+    .wrapper-footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+        .wrapper-footer-details{
+            height: 25px;
+        }
+        .wrapper-attacks{
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            .accordion{
+                margin-bottom: 12px;
+            }
+            .sword{
+                width: 16px;
+            }
+            .description{
+                font-size: 18px;
+                color: gray;
+            }
+            .damage{
+                font-size: 18px;
+                margin-left: 5px;
+                font-weight: bold;
+            }
+        }
+        .wrapper-weakness{
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .resist{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img-resist{
+                    width: 25px;
+                }
+                .text{
+                    font-weight: bold;
+                    margin-left: 4px;
+                }
+            }
+            .weak{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img-weak{
+                    width: 25px;
+                }
+                .text{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+   
+ 
+    .wrapper-img-type{
+        width: 46px;
+        height: 46px;
+      .img-type{
+        width: 46px;
+      }
+    }
+    .wrapper-cost{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .img-cost{
+            width: 25px;
+        }
+    }
+}
+
+@media screen and ( max-width: 959px) {
+    .wrapper-details{
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .wrapper-weakness{
+        flex-direction: column !important;
+    }
+    .img-hiRes{
+        width: 300px;
+        margin-bottom: 12px;
+    }
+    .wrapper-cost{
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+  }

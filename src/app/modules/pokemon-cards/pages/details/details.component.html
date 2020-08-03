@@ -1,0 +1,68 @@
+<div class="wrapper-details" *ngIf="card">
+    <img class="img-hiRes" [src]="card.imageUrlHiRes">
+    <div class="wrapper-right">
+        <button (click)="navigateToCards()" class="btn-back" mat-raised-button>Voltar</button>
+        <mat-card>
+            <div class="wrapper-info">
+                <p><strong>Nome:</strong>
+                    <span class="card-id">{{card.name}}</span>
+                    <strong class="card-id">ID:</strong>
+                    <span class="card-id">{{card.id}}</span> 
+                </p>
+                <div class="wrapper-img-type" >
+                    <img class="img-type" *ngFor="let type of card.types" [matTooltip]="type" [src]="getUrlTypeImage(type)">
+                  </div>
+            </div>
+            
+            <div class="wrapper-footer">
+                <div class="wrapper-attacks">
+                    <p><strong>Ataques:</strong></p>
+                    <app-accordion class="accordion" *ngFor="let attack of card.attacks">
+                        <div header>
+                           <span><strong>{{attack.name}}</strong></span>
+                        </div>
+                        <div content>
+                            <p class="description">{{attack.text}}</p>
+                            <p><img class="sword"  matTooltip="Dano" src="./assets/images/sword.png">
+                                <span class="damage">{{attack.damage}}</span></p>
+                            <div class="wrapper-cost">
+                                <img class="img-cost" *ngFor="let cost of attack.cost" [matTooltip]="cost" [src]="getUrlTypeImage(cost)">
+                            </div>
+                        </div>
+                         
+                    </app-accordion>
+                </div>
+                <div class="wrapper-weakness">
+                    <div>
+                        <p><strong>Resistencia(s):</strong></p>
+                        <div class="wrapper-footer-details">
+                            <div class="resist" *ngFor="let resist of card.resistances" >
+                                <img class="img-resist" [matTooltip]="resist.type" [src]="getUrlTypeImage(resist.type)">
+                                <span class="text">{{resist.value}}
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   <div>
+                    <p><strong>Fraqueza(s):</strong></p>
+                    <div class="wrapper-footer-details">
+                        <div class="weak" *ngFor="let weak of card.weaknesses"   >
+                            <img class="img-weak" [matTooltip]="weak.type" [src]="getUrlTypeImage(weak.type)">
+                            <span class="text">{{weak.value}}
+                            </span>
+                        </div>
+                    </div>
+                   
+                   </div>
+                    
+                </div>
+            </div>
+         
+           
+           
+        </mat-card>
+    </div>
+   
+</div>
+

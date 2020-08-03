@@ -1,0 +1,8 @@
+<div class="wrapper">
+    <app-input-text class="input-search" [debounceTime]="searchDebounceTime" (valueChanges)="search($event)" label="Buscar"></app-input-text>
+    <div class="wrapper-cards">
+        <span class="text-not-found" *ngIf="filteredCards.length === 0">Nenhum resultado encontrado!</span>
+        <app-pokemon-card class="card" *ngFor="let card of filteredCards | orderBy: 'name'" (seeDetailsEvent)="navigateToDetails($event)" [card]="card"></app-pokemon-card>
+        
+    </div>
+</div>

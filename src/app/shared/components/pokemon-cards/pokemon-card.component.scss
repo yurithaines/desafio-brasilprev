@@ -1,0 +1,29 @@
+.example-card {
+  width: 250px;
+  height: 515px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.wrapper-card-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .wrapper-img-type{
+        width: 46px;
+        height: 46px;
+      .img-type{
+        width: 46px;
+      }
+    }
+    .btn-details{
+      background: #808080a3;
+      color: white;
+    }
+    
+}
